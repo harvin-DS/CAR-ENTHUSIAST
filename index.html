@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAR ENTHUSIAST - Premium Showroom</title>
+    <meta name="description" content="Discover your dream ride at CAR ENTHUSIAST. A premium showroom for searching and filtering cars by brand, body type, and budget.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo-section">
+            <div class="logo" style="display: flex; align-items: center; gap: 10px; cursor: pointer;" onclick="window.location.hash='#home'">
+                <img src="logo.png" alt="Car Enthusiast Logo" style="max-height: 40px; width: auto; display: block;">
+                <span><span class="logo-red">CAR</span> ENTHUSIAST</span>
+            </div>
+        </div>
+
+        <div class="search-section">
+            <div class="search-wrapper">
+                <input type="text" id="nav-search" placeholder="Ask AI: 'Find a diesel SUV under 15 Lakh'..." autocomplete="off">
+                <button class="ai-button">AI ON</button>
+            </div>
+        </div>
+
+        <div class="nav-actions">
+            <nav>
+                <ul>
+                    <li><a href="#home" id="nav-showroom" class="active">Home</a></li>
+                    <li><a href="#showroom" id="nav-filters">Explore Showroom</a></li>
+                </ul>
+            </nav>
+            <div class="action-buttons">
+                <div class="action-icons">
+                    <button id="nav-liked" class="icon-btn" title="Liked Cars">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.84-8.84 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        <span id="liked-count-badge" class="count-badge hidden">0</span>
+                    </button>
+                    <button class="icon-btn" title="Account">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dedicated Home Menu / Landing Page -->
+    <!-- Slider / Carousel Home Page -->
+    <section id="home-view" class="home-view slider-view">
+        <div class="slider">
+            <div class="list">
+                <div class="item active">
+                    <img src="slide1_maruti_swift.png" alt="Maruti Suzuki Swift">
+                    <div class="content">
+                        <div class="title">MARUTI SUZUKI SWIFT</div>
+                        <div class="topic">INDIA'S FAVOURITE HATCHBACK</div>
+                        <div class="des">
+                            Peppy, fuel-efficient, and built for every road. The Swift delivers a sporty drive with up to 23 km/l mileage — perfect for city warriors.
+                        </div>
+                        <div class="buttons">
+                            <button class="cta-showroom-btn">EXPLORE COLLECTION</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="slide2_mahindra_thar.png" alt="Mahindra Thar">
+                    <div class="content">
+                        <div class="title">MAHINDRA THAR</div>
+                        <div class="topic">BORN FOR THE WILD</div>
+                        <div class="des">
+                            Conquer any terrain with the iconic Mahindra Thar. With 4WD capability, rugged ladder-frame chassis, and bold design — the road is just the beginning.
+                        </div>
+                        <div class="buttons">
+                            <button class="cta-showroom-btn">EXPLORE COLLECTION</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="slide3_tata_nexon.png" alt="Tata Nexon EV">
+                    <div class="content">
+                        <div class="title">TATA NEXON EV</div>
+                        <div class="topic">DRIVE THE ELECTRIC FUTURE</div>
+                        <div class="des">
+                            India's best-selling electric SUV. With 465 km of range, fast charging support, and a stunning panoramic roof — the Nexon EV redefines green driving.
+                        </div>
+                        <div class="buttons">
+                            <button class="cta-showroom-btn">EXPLORE COLLECTION</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="slide4_hyundai_creta.png" alt="Hyundai Creta">
+                    <div class="content">
+                        <div class="title">HYUNDAI CRETA</div>
+                        <div class="topic">PREMIUM FAMILY SUV</div>
+                        <div class="des">
+                            Sophisticated style meets segment-leading tech. The Creta offers a spacious cabin, ADAS safety suite, and a powerful 1.5L turbo engine — comfort redefined.
+                        </div>
+                        <div class="buttons">
+                            <button class="cta-showroom-btn">EXPLORE COLLECTION</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="slide5_maruti_ertiga.png" alt="Maruti Suzuki Ertiga">
+                    <div class="content">
+                        <div class="title">MARUTI SUZUKI ERTIGA</div>
+                        <div class="topic">THE FAMILY MPV CHAMPION</div>
+                        <div class="des">
+                            Room for everyone and everything. The Ertiga's 7-seater layout, smart hybrid engine, and 26 km/l mileage makes every family journey a pleasure.
+                        </div>
+                        <div class="buttons">
+                            <button class="cta-showroom-btn">EXPLORE COLLECTION</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 6: Audi A4 -->
+                <div class="item">
+                    <img src="car images/audi-a4.jpg" alt="Audi A4">
+                    <div class="content">
+                        <div class="title">AUDI A4</div>
+                        <div class="topic">PRECISION & LUXURY</div>
+                        <div class="des">
+                            A masterpiece of German engineering. Experience the perfect blend of sportiness and elegance in the Mythos Black Audi A4 — precision at every turn.
+                        </div>
+                        <div class="buttons">
+                            <button class="cta-showroom-btn">EXPLORE COLLECTION</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 7: BMW 3 Series -->
+                <div class="item">
+                    <img src="car images/bmw-3-series.jpg" alt="BMW 3 Series">
+                    <div class="content">
+                        <div class="title">BMW 3 SERIES</div>
+                        <div class="topic">LUXURY REDEFINED</div>
+                        <div class="des">
+                            The Gran Limousine in Phytonic Blue. Delivering unmatched dynamics and a spacious luxury interior — the ultimate driving machine for the discerning enthusiast.
+                        </div>
+                        <div class="buttons">
+                            <button class="cta-showroom-btn">EXPLORE COLLECTION</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 8: VW Virtus -->
+                <div class="item">
+                    <img src="car images/volkswagen-virtus.jpg" alt="Volkswagen Virtus">
+                    <div class="content">
+                        <div class="title">VOLKSWAGEN VIRTUS</div>
+                        <div class="topic">THE PERFORMANCE SEDAN</div>
+                        <div class="des">
+                            Feel the German-engineered power with the Wild Cherry Red Virtus. TSI technology meets a 5-star safety rating for a thrilling, secure drive.
+                        </div>
+                        <div class="buttons">
+                            <button class="cta-showroom-btn">EXPLORE COLLECTION</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 9: Audi Q3 -->
+                <div class="item">
+                    <img src="car images/audi-q3.jpg" alt="Audi Q3">
+                    <div class="content">
+                        <div class="title">AUDI Q3</div>
+                        <div class="topic">COMPACT EXCELLENCE</div>
+                        <div class="des">
+                            Glacier White elegance meets Quattro performance. The Q3 offers a panoramic sunroof, premium interiors, and the agility to master city streets.
+                        </div>
+                        <div class="buttons">
+                            <button class="cta-showroom-btn">EXPLORE COLLECTION</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 10: Toyota Hycross -->
+                <div class="item">
+                    <img src="car images/toyota-innova-hycross.jpg" alt="Toyota Innova Hycross">
+                    <div class="content">
+                        <div class="title">TOYOTA INNOVA HYCROSS</div>
+                        <div class="topic">THE HYBRID REVOLUTION</div>
+                        <div class="des">
+                            Eco-friendly power meets ultimate comfort. With a revolutionary strong-hybrid engine and lounge-like seating, the Hycross redefines premium family travel.
+                        </div>
+                        <div class="buttons">
+                            <button class="cta-showroom-btn">EXPLORE COLLECTION</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Arrows -->
+            <div class="arrows">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+            <!-- Time Line -->
+            <div class="time"></div>
+        </div>
+
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="Car Enthusiast Logo" style="max-height: 40px; width: auto; display: block; margin: 0 auto; opacity: 0.9;">
+                </div>
+                <p>Elegance in Motion.</p>
+                <div class="footer-copyright">
+                    &copy; 2026 CAR ENTHUSIAST. All rights reserved.
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <!-- Showroom View -->
+    <section id="showroom-view" class="hidden">
+        <main class="showroom">
+        <!-- Sidebar Filters -->
+        <aside class="filters" id="filters">
+            <div class="filter-header">
+                <h2>Refine Search</h2>
+                <button id="reset-filters" class="reset-btn">Reset</button>
+            </div>
+            
+            <div class="filter-group">
+                <label for="brand-filter">Car Brand</label>
+                <div class="select-wrapper">
+                    <select id="brand-filter">
+                        <option value="all">All Brands</option>
+                        <!-- Options populated via JS -->
+                    </select>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label for="body-type-filter">Body Type</label>
+                <div class="select-wrapper">
+                    <select id="body-type-filter">
+                        <option value="all">All Types</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option value="Micro SUV">Micro SUV</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="SUV">SUV</option>
+                        <option value="MUV">MUV / MPV</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label for="budget-filter">Max Budget: <span class="val-text">₹<span id="budget-val">3 Crore+</span></span></label>
+                <input type="range" id="budget-filter" min="0" max="30000000" step="500000" value="30000000">
+                <div class="range-labels">
+                    <span>₹0</span>
+                    <span>₹3Cr+</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Listing -->
+        <section class="car-collection" id="collection">
+            <div class="collection-header">
+                <h2>Showing <span id="result-count">0</span> Vehicles</h2>
+                <div class="sort-by">
+                    <label for="sort-select">Sort By:</label>
+                    <div class="select-wrapper">
+                        <select id="sort-select">
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="newest">Year: Newest First</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="car-grid" id="car-grid">
+                <!-- Loader -->
+                <div class="loader" id="loader">
+                    <div class="spinner"></div>
+                    <p>Loading the finest rides...</p>
+                </div>
+                <!-- Cars populated via JS -->
+            </div>
+        </section>
+        </main>
+    </section>
+
+    <!-- Liked Cars View -->
+    <section id="liked-view" class="hidden">
+        <div class="view-header">
+            <button id="back-from-liked" class="back-btn-simple">&larr; Back to Explore</button>
+            <h2>My Liked Vehicles</h2>
+        </div>
+        <div class="car-grid" id="liked-grid">
+            <!-- Liked cars populated via JS -->
+            <div class="no-results" id="no-liked-msg">
+                <p>You haven't liked any cars yet. Start exploring!</p>
+                <button class="cta-showroom-btn" onclick="window.location.hash='#showroom'">Explore Showroom</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Bar (Sticky at bottom) -->
+    <div id="compare-bar" class="compare-bar hidden">
+        <div class="selected-items" id="selected-compare-items">
+            <!-- Selected cars will appear here -->
+        </div>
+        <div class="compare-actions">
+            <button id="compare-now-btn" class="compare-btn">Compare Now</button>
+            <button id="clear-compare-btn" class="clear-btn">Clear All</button>
+        </div>
+    </div>
+
+    <!-- Comparison Overlay (Full-screen) -->
+    <div id="comparison-overlay" class="comparison-overlay hidden">
+        <div class="comparison-modal">
+            <header class="overlay-header">
+                <h2>Side-by-Side Comparison</h2>
+                <button id="close-comparison" class="close-btn">&times;</button>
+            </header>
+            <div class="comparison-content" id="comparison-table-container">
+                <!-- Comparison table will be injected here -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Dedicated Car Details View -->
+    <section id="details-view" class="details-view hidden">
+        <button id="back-to-showroom" class="back-btn" onclick="window.location.hash='#showroom'">
+            &larr; Back to Showroom
+        </button>
+        
+        <div class="details-container">
+            <div class="details-hero" id="details-hero-image">
+                <!-- Image or SVG will be injected here -->
+            </div>
+            
+            <div class="details-info">
+                <div class="details-header">
+                    <span class="details-brand" id="details-brand">BRAND</span>
+                    <h2 class="details-model" id="details-model">Model Name</h2>
+                    <div id="details-fuel-selector" class="fuel-selector">
+                        <!-- Fuel chips injected here -->
+                    </div>
+                    <div id="details-variant-selector" class="variant-selector">
+                        <!-- Variant chips will be injected here -->
+                    </div>
+                    <div class="details-price" id="details-price">Price</div>
+                </div>
+                
+                <h3 class="specs-title">Vehicle Specifications</h3>
+                <div class="details-specs">
+                    <div class="dspec">
+                        <span class="dspec-label">Year</span>
+                        <span class="dspec-value" id="details-year">-</span>
+                    </div>
+                    <div class="dspec">
+                        <span class="dspec-label">Fuel Type</span>
+                        <span class="dspec-value" id="details-fuel">-</span>
+                    </div>
+                    <div class="dspec">
+                        <span class="dspec-label">Transmission</span>
+                        <span class="dspec-value" id="details-trans">-</span>
+                    </div>
+                    <div class="dspec">
+                        <span class="dspec-label">Mileage</span>
+                        <span class="dspec-value" id="details-mileage">-</span>
+                    </div>
+                    <div class="dspec">
+                        <span class="dspec-label">Horsepower</span>
+                        <span class="dspec-value" id="details-horsepower">-</span>
+                    </div>
+                    <div class="dspec">
+                        <span class="dspec-label">Torque</span>
+                        <span class="dspec-value" id="details-torque">-</span>
+                    </div>
+                    <div class="dspec">
+                        <span class="dspec-label">Efficiency</span>
+                        <span class="dspec-value" id="details-efficiency">-</span>
+                    </div>
+                    <div class="dspec">
+                        <span class="dspec-label">Engine CC</span>
+                        <span class="dspec-value" id="details-engine">-</span>
+                    </div>
+                    <div class="dspec">
+                        <span class="dspec-label">Seating Capacity</span>
+                        <span class="dspec-value" id="details-seating">-</span>
+                    </div>
+                    <div class="dspec full-width">
+                        <span class="dspec-label">Estimated Service Cost</span>
+                        <span class="dspec-value" id="details-service">-</span>
+                    </div>
+                </div>
+
+                <!-- EMI Calculator Section -->
+                <div class="emi-calculator">
+                    <h3 class="specs-title">EMI / Loan Calculator</h3>
+                    <div class="emi-grid">
+                        <div class="emi-input-group">
+                            <label>Down Payment (₹)</label>
+                            <input type="number" id="emi-downpayment" value="200000" step="50000">
+                        </div>
+                        <div class="emi-input-group">
+                            <label>Interest Rate (%)</label>
+                            <input type="number" id="emi-interest" value="8.5" step="0.1">
+                        </div>
+                        <div class="emi-input-group">
+                            <label>Tenure (Years)</label>
+                            <select id="emi-tenure">
+                                <option value="1">1 Year</option>
+                                <option value="3">3 Years</option>
+                                <option value="5" selected>5 Years</option>
+                                <option value="7">7 Years</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="emi-result">
+                        <div class="emi-amount-card">
+                            <span class="emi-label">Monthly EMI</span>
+                            <span class="emi-value" id="emi-monthly-val">₹0</span>
+                        </div>
+                        <div class="emi-details-summary">
+                            <p>Loan Amount: <strong id="emi-loan-amt">₹0</strong></p>
+                            <p>Total Interest: <strong id="emi-total-interest">₹0</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Chatbot -->
+    <div id="chatbot" class="chatbot-container collapsed">
+        <div class="chat-header" id="chat-header">
+            <h3><span class="chat-icon">🤖</span> AI Assistant</h3>
+            <button id="chat-toggle" class="chat-toggle">▼</button>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot-message">Hello! I'm your CAR ENTHUSIAST AI. I can filter cars (e.g. <em>'SUVs under 20 lakhs'</em>) or answer specific questions (e.g. <em>'What is the mileage of the Nexon?'</em>). How can I help?</div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Type your message..." autocomplete="off">
+                <button id="chat-send">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CSV Parser & Data -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
